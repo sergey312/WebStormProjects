@@ -1,41 +1,133 @@
-.general{
-
-    position: absolute;
-    width: 1920px;
-    height: 1080px;
+div{
+    color: white;
 }
+
 body{
     background-image: url("image/fone1.jpg");
-    position: absolute;
     background-size: cover;
     background-attachment: fixed;
 }
-.menu{
+
+.header{
+    border-bottom-color: white;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
     position: fixed;
-    overflow: hidden;
+    left: 0;
     top: 0;
     width: 100%;
-    display: inline-block;
     background-color: black;
+    margin-bottom: 10px;
+    min-height: 70px   ;
+    z-index: 100;
+}
+
+.headerText{
+    vertical-align: middle;
+    display: inline-block;
+    width: 40%;
+}
+
+.headerTextPosition{
+    display: block;
+    text-align: center
+}
+
+.headerTextfont-size{
+    font-size: 21px ;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+A:hover {
+    color: red; /* Ссылка красного цвета */
+}
+
+.headerLink{
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 13px;
 
 }
-.iner{
-    float:left;
-    display: block;
+
+.headline{
+
     text-align: center;
+    vertical-align: center;
+    height: 70vh;
+    width: 100%;
+}
+
+.headlinePosition{
+    margin: auto;
+    position: absolute;
+    top:30%;
+    left:32%;
+}
+
+.headlineFirstText{
+    background-color: #d13f4a;
+    display:inline;
+    padding: 3px 15px 3px 15px;
+
+}
+.headlineSecondlyText{
+    margin-top: 2px;
+    margin-bottom:5px;
+    background-color: black;
+    font-size: 25px;
+    font-family: "Clarendon w", serif;
     padding: 10px;
 }
 
-.other{
+.headlineThirdText{
+    background-color: rgba(0,0,0,0.5);
+    display: inline;
+    padding:10px;
+
+}
+
+.feed{
+ width: 100%;
+    height: 700px;
+}
+
+.feedSize{
+    margin:auto;
+    width: 70%;
+    height: 700px;
+}
+
+.news {
+    margin: 0;
+    width: 70%;
+    background-color: rgba(255,255,255,0.5);
+    height: 700px;
+    display: inline-block;
     float: left;
 }
-.text{
 
-    weight: 50%;
-}
-div{
-   text-align: center;
-    color: white;
+.other{
+    margin: 0;
+    width: 28%;
+    background-color: rgba(0,0,0,0.5);
+    height: 700px;
     display: inline-block;
-
+    float: left;
 }
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
