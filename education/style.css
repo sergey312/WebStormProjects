@@ -1,0 +1,41 @@
+.general{
+
+    position: absolute;
+    width: 1920px;
+    height: 1080px;
+}
+body{
+    background-image: url("image/fone1.jpg");
+    position: absolute;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.menu{
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    width: 100%;
+    display: inline-block;
+    background-color: black;
+
+}
+.iner{
+    float:left;
+    display: block;
+    text-align: center;
+    padding: 10px;
+}
+
+.other{
+    float: left;
+}
+.text{
+
+    weight: 50%;
+}
+div{
+   text-align: center;
+    color: white;
+    display: inline-block;
+
+}
