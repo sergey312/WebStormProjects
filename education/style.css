@@ -1,5 +1,49 @@
+@font-face {
+    font-family: 'Proxima Nova Rg';
+    src: url('fonts/ProximaNova-Regular.eot');
+    src: local('Proxima Nova Regular'), local('ProximaNova-Regular'),
+    url('fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),
+    url('fonts/ProximaNova-Regular.woff') format('woff'),
+    url('fonts/ProximaNova-Regular.ttf') format('truetype');
+
+}
+
+@font-face {
+    font-family: 'Proxima Nova Th';
+    src: url('fonts/ProximaNova-Extrabld.eot');
+    src: local('Proxima Nova Extrabold'), local('ProximaNova-Extrabld'),
+    url('fonts/ProximaNova-Extrabld.eot?#iefix') format('embedded-opentype'),
+    url('fonts/ProximaNova-Extrabld.woff') format('woff'),
+    url('fonts/ProximaNova-Extrabld.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Proxima Nova Lt';
+    src: url('fonts/ProximaNova-Semibold.eot');
+    src: local('Proxima Nova Semibold'), local('ProximaNova-Semibold'),
+    url('fonts/ProximaNova-Semibold.eot?#iefix') format('embedded-opentype'),
+    url('fonts/ProximaNova-Semibold.woff') format('woff'),
+    url('fonts/ProximaNova-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Proxima Nova Cn Rg';
+    src: url('fonts/ProximaNovaCond-RegularIt.eot');
+    src: local('Proxima Nova Condensed Regular Italic'), local('ProximaNovaCond-RegularIt'),
+    url('fonts/ProximaNovaCond-RegularIt.eot?#iefix') format('embedded-opentype'),
+    url('fonts/ProximaNovaCond-RegularIt.woff') format('woff'),
+    url('fonts/ProximaNovaCond-RegularIt.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
 div{
     color: white;
+    font-family: "Proxima Nova Rg" ;
 
 }
 
@@ -19,10 +63,9 @@ body{
 
 .header{
     display: inherit;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 1fr;
     width: 100%;
     background-color: #111111;
-    margin-bottom: 10px;
 }
 
 .header_Text {
@@ -35,10 +78,12 @@ body{
 
 .header_TextFont-size {
     font-size: 17px ;
+    font-family: 'Proxima Nova Lt';
 }
 
  .header_TextFont-size2 {
      font-size: 12px ;
+     font-family: 'Proxima Nova Lt';
  }
 
 a {
@@ -47,30 +92,32 @@ a {
     font-size: 14px ;
 }
 A:hover {
-    color: red; /* Ссылка красного цвета */
+    color: red;
+}
+
+.header_Links {
+    width: 70%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    vertical-align: middle;
+    padding: 32px;
+
 }
 
 .header_Link {
-    display: inline-block;
-    text-align: center;
     vertical-align: middle;
-    padding: 13px;
-
 }
 
 .headline {
-
+    display: inherit;
     text-align: center;
     vertical-align: center;
-    height: 70vh;
+    height: 423px;
     width: 100%;
 }
 
 .headline_Position {
     margin: auto;
-    position: absolute;
-    top:30%;
-    left:32%;
 }
 
 .headline_FirstText {
@@ -80,103 +127,126 @@ A:hover {
     font-size: 15px;
 }
 .headline_SecondlyText {
+    font-family: 'Proxima Nova Th';
     margin-top: 2px;
     margin-bottom:5px;
-    background-color: black;
+    background-color: #111111;
     font-size: 28px;
     padding: 10px;
 }
 
 .headline_ThirdText {
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,1);
     display: inline;
     padding:10px;
     font-size: 14px;
+    font-family: 'Proxima Nova Lt';
 }
 
 .feed {
     width: 100%;
-    height: 700px;
 }
 
 .feed_Size {
     margin:auto;
-    width: 70%;
-    min-height: 700px;
+    width: 961px;
     display: grid;
     grid-template-columns: 23fr 10fr;
 }
 
 .feed_news {
+    display: inherit;
     margin: 0;
     background-color: rgba(255,255,255,1);
 }
 
 .feed_LatestNewsSize {
     width: 100%;
+    margin: auto;
 
 }
 
 .feed_LatestNews {
     font-size: 16px;
     background-color: #f3f3f3;
-    color : #949494;
-    padding: 10px;
+    color: #999999;
     margin: 10px;
-    border-right-color: red;
+    border-right-color: #d34650;
     border-right-style: solid;
     border-right-width: 2px;
-    height: 27px;
+    height: 47px;
+    font-weight: 700;
+    padding: 0 0 0 25px;
+    line-height: 45px;
+
+
 }
 
 .feed_OneNewsSize {
-    height: 400px;
 }
 
 .feed_OneNews {
     display: grid;
     grid-template-rows: 30fr 25fr;
-    margin: 5px;
+    margin: 10px;
     height: 100%;
 }
 
-.feed_Picture {
-
+.feed_Picture1 {
+    background: url("image/Layer_1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 229px;
 }
+
+.feed_Picture2 {
+   background-image: url("image/Layer_2.png") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 229px;
+}
+
+.feed_Picture3 {
+    background-image: url("image/Layer_3.png") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 229px;
+}
+
+.feed_Picture4 {
+    background-image: url("image/Layer_4.png") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 229px;
+}
+
 .feed_StatAndTextSize {
     display: inherit;
 
 }
 
 .feed_StatAndText {
-    margin: 10px 0 10px 0;
+    margin: 30px 0 20px 0;
     display: inherit;
     grid-template-columns: 14fr 80fr;
 }
 
-.feed_Text {
-    width: 93%;
-}
-
-.feed_HeaderText {
-    color: #484848;
-    font-size: 21px;
-}
-
-.feed_TextTriwial {
-    font-size: 13px;
-    color: #484848;
-}
-
 .feed_Stat {
     display: inherit;
-    grid-template-rows: 1fr 1fr 1fr 1fr 2fr ;
-    grid-template-columns: 80%;
+    grid-template-columns: 78.5%;
 
 }
+
+.one_stat {
+    display: inherit;
+    grid-template-columns: 1fr 3fr;
+    margin: 0 0 4px 0;
+}
+
 
 .feed_OneStat1 {
     background-color: #d13f4a;
+
 }
 
 .feed_OneStat2 {
@@ -191,11 +261,29 @@ A:hover {
     background-color: #2f81c0;
 }
 
+.icon {
+text-align: center;
+}
+
+.stat {
+    line-height: 22px;
+    font-family: "Proxima Nova";
+    font-size: 9px;
+    color: #ffffff;
+    height: 6px;
+    letter-spacing: 0.9px;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 0 4px 0 0;
+    text-align: right;
+}
+
 .feed_ReadMore {
 
 }
 
 .feed_Text {
+    width: 100%;
     display: inherit;
     grid-template-rows: 2fr 8fr ;
 }
@@ -205,8 +293,74 @@ A:hover {
 }
 
 .feed_TextTriwial {
+    margin: auto;
+}
+
+.SHeaderText {
+    color: #484848;
+    font-size: 21px;
+    font-family: 'Proxima Nova Semibold';
+    border-left-color: #d13f4a;
+    border-left-style: solid;
+    border-left-width: 2px;
+    padding: 0 25px 0 25px;
+    line-height: 22px;
+    height: 19px;
+    font-weight: 600;
+    letter-spacing: 2.1px;
 
 }
+
+.STextTriwial {
+    font-family: 'Proxima Nova Cn Rg';
+    font-size: 13px;
+    color: #484848;
+    padding: 0 25px 0 30px;
+    letter-spacing: 1.3px;
+    line-height: 22px;
+    font-weight: 400;
+    line-height: 22px;
+
+}
+.transition {
+    margin: auto;
+    display: inherit;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-bottom: 20px;
+}
+.Sfirst_page {
+    padding-right: 4px;
+}
+
+.Ssecond_page {
+    padding-right: 4px;
+}
+
+.Sthird_page {
+    padding-right: 4px;
+}
+
+.first_page {
+    height: 14px;
+    width: 14px;
+    background-color: #c1c1c1;
+    border-radius: 3px;
+}
+
+.second_page {
+    height: 14px;
+    width: 14px;
+    background-color:#a6a6a6;
+    border-radius: 3px;
+}
+
+.third_page {
+    height: 14px;
+    width: 14px;
+    background-color: #8f8f8f;
+    border-radius: 3px;
+}
+
 .other_Size {
     background-color: rgba(0,0,0,1);
 }
@@ -222,21 +376,31 @@ A:hover {
 
 .other_headline {
     background-color: #181818;
-    padding: 10px;
-    border-left-color: red;
-    border-left-style: solid;
-    border-left-width: 2px;
-    height: 27px;
+    color: #999999;
+    padding: 13.5px;
+    border-right-color: #862d34;
+    border-right-style: solid;
+    border-right-width: 2px;
+    height: 20px;
+    vertical-align: center;
+}
+
+.sponsors_picture {
+    padding-left: 0;
 }
 
 .b_c_black {
     background-color: #181818;
+    width: 100%;
+    padding: 0 10px 0 10px;
+    margin-left: -10px;
 }
 
 .sponsors {
     display: grid;
-    grid-template-columns: 3fr 8fr;
-    padding-top: 5px;
+    grid-template-columns: 1fr 9fr;
+    padding-top: 10px;
+    padding-bottom: 5px;
 }
 
 .other_linesponsors {
@@ -289,6 +453,7 @@ A:hover {
     color: #ffffff;
     text-align: center;
     vertical-align: middle;
+    font-family: 'Proxima Nova Cn Rg';
 }
 
 .ThirdT {
@@ -338,6 +503,7 @@ A:hover {
     padding-top: 10px;
     display: inherit;
     grid-template-columns: 1fr 6fr;
+
 }
 
 .TwitT {
@@ -352,12 +518,15 @@ A:hover {
 
 .from_twitterText {
     font-size: 10px;
+    color: #999999;
 }
 
 .twitterName {
     font-size: 10px;
+    color: #999999;
 }
 
 .twitterTime {
     font-size: 10px;
+    color: #999999;
 }
